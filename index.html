@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#4c1f02">
+  <meta name="Keywords" content="HLS player">
+  <meta name="Description" content="My HLS player">
+  <title>My HLS player</title>
+  <link rel="stylesheet" href="/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest/dist/hls.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <h1 class="center" style="color: blue">My HLS player</h1>
+    <form id="myForm">
+      <label for="link" class="bigger">Source URL - enter your custom video URL</label><br>
+      <input type="text" class="bigger" id="link">
+      <button id="but" type="submit" class="bigger" onclick="customLink()">Play from link</button>
+    </form>
+    <br><br>
+    <div class="center">
+    <label for="choose" class="bigger">OR Choose a video from list:</label>
+    <select id="choose" class="bigger" onchange="fromList()">
+      <option selected="selected" value="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8">Big Buck Bunny</option>
+      <option value="/movie/hsl_playlist.m3u8">My example!</option>
+      <option value="https://mnmedias.api.telequebec.tv/m3u8/29880.m3u8">NoName example #1</option>
+      <option value="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8">NoName example #2</option>
+      <option value="https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8">VR test stream</option>
+    </select> <br><br>
+    </div>
+    <div id="quality">
+      <h2>Quality control</h2>
+      <script src="/otherScripts.js"></script>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="column">
+      <video id="myvideo" class="center" controls preload="metadata" width="480" height="270"></video>
+      </div>
+      <div id="info" class="column bigger2" style="text-align: right;">
+        <h2>Video information:</h2>
+        <div class="bigger" id="bitrate"></div>
+        <div class="bigger" id="height"></div>
+        <div class="bigger" id="width"></div>
+        <div class="bigger" id="videoo"></div>
+        <div class="bigger" id="audio"></div>
+      </div>
+    </div>
+    <h3 class="bigger">Tracking control - used sources (every source is printed when it is loaded):</h3>
+    <div class="bigger" id="tracking"></div>
+  </div>
+  <script src="/playerScript.js"></script>
+  <script>play("https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8");</script>
+  <div class="footer bigger">Author: Konrad Micek, EiT 3rd year</div>
+</body>
+
+</html>

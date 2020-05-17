@@ -1,0 +1,62 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    position: relative;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #42bff5;
+    color: white;
+    text-align: center;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: ridge;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 120%;
+  }
+
+  .bigger {
+      font-size: 150%;
+  }
+
+  .bigger2 {
+    font-size: 120%;
+  }
+
+  input {
+    width: 60%;
+  }
+
+  .center {
+      text-align: center;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
